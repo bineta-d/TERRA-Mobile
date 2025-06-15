@@ -9,14 +9,17 @@ export default function TabLayout() {
 
   return (
     <Tabs 
-     screenOptions={{
+    screenOptions={() => ({
       tabBarActiveTintColor: colorScheme === 'dark' ? 'white' : 'black',
       tabBarStyle: {
         backgroundColor: '#F5E8D7',
-      }, headerStyle: {
+      },
+      headerStyle: {
         backgroundColor: '#F5E8D7',
-      }
-    }}>
+      },
+      headerBackTitle: 'Back', 
+    })}
+  >
       {/* Home Screen */}
       <Tabs.Screen name="index" options={{ title: 'Home',
       tabBarIcon:({color,size}) =>(
