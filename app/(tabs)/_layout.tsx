@@ -1,6 +1,7 @@
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useColorScheme } from 'react-native';
+import { red } from 'react-native-reanimated/lib/typescript/Colors';
 
 
 export default function TabLayout() {
@@ -10,6 +11,11 @@ export default function TabLayout() {
     <Tabs 
      screenOptions={{
       tabBarActiveTintColor: colorScheme === 'dark' ? 'white' : 'black',
+      tabBarStyle: {
+        backgroundColor: '#F5E8D7',
+      }, headerStyle: {
+        backgroundColor: '#F5E8D7',
+      }
     }}>
       {/* Home Screen */}
       <Tabs.Screen name="index" options={{ title: 'Home',

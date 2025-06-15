@@ -8,7 +8,7 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack screenOptions={{ headerShown: false }} initialRouteName="welcome" />
+      <Stack screenOptions={{ headerShown: false,  animation: 'fade' }} initialRouteName="welcome" />
     </ThemeProvider>
   );
 }

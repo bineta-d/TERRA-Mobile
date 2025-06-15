@@ -12,6 +12,7 @@ module.exports = {
         'white-pastel': '#FAF9F6',
         'cream-pastel': '#FDF6EC',
         'mocha-pastel': '#D2B48C',
+        'tan-pastel': '#F5E8D7'
       }
     },
   },
