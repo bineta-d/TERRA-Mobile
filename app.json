@@ -1,37 +1,37 @@
 {
   "expo": {
-    "name": "my-expo-app",
-    "slug": "my-expo-app",
+    "name": "TERRA",
+    "slug": "TERRA",
     "version": "1.0.0",
-
+    "scheme": "TERRA",
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/africa.png",
+      "bundler": "metro"
     },
-
     "experiments": {
       "tsconfigPaths": true
     },
-
-    "plugins": [],
-
+    "plugins": [
+      "expo-router"
+    ],
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-
+    "icon": "./assets/africa.png",
     "userInterfaceStyle": "light",
-
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/africa.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#FDF6EC"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/africa.png",
+        "backgroundColor": "#FDF6EC"
       }
     }
   }
