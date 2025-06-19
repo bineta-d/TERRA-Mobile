@@ -2,14 +2,13 @@ import { View, Text, SafeAreaView, ScrollView, TouchableOpacity } from 'react-na
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import CustomTabBar
- from 'components/CustomTabBar';
+import CustomTabBar from 'components/CustomTabBar';
+
 export default function ProfileView() {
   const router = useRouter();
 
-  const navigateTo = (screenName) => {
-    console.log('Navigating to:', screenName);
-    router.push('/'); 
+  const navigateTo = (screenName: string) => {
+    router.push(screenName);
   };
 
   return (
@@ -28,14 +27,14 @@ export default function ProfileView() {
         <View className="bg-white rounded-lg shadow-md mb-6 border border-[#705855] overflow-hidden">
           <TouchableOpacity
             className="flex-row justify-between items-center p-4 border-b border-dark-brown"
-            onPress={() => navigateTo('/edit-name')}
+            onPress={() => navigateTo('/edit-screens/EditName')}
           >
             <Text className="text-base text-gray-800">Name: Ndiassse D.</Text>
             <Ionicons name="chevron-forward-outline" size={24} color="gray" />
           </TouchableOpacity>
           <TouchableOpacity
             className="flex-row justify-between items-center p-4"
-            onPress={() => navigateTo('/edit-phone')}
+            onPress={() => navigateTo('/edit-screens/EditPhone')}
           >
             <Text className="text-base text-gray-800">Phone: 700-888-4788</Text>
             <Ionicons name="chevron-forward-outline" size={24} color="gray" />
@@ -47,14 +46,14 @@ export default function ProfileView() {
         <View className="bg-white rounded-lg shadow-md mb-6 border border-[#705855] overflow-hidden">
           <TouchableOpacity
             className="flex-row justify-between items-center p-4 border-b border-dark-brown"
-            onPress={() => navigateTo('/edit-email')}
+            onPress={() => navigateTo('/edit-screens/EditEmail')}
           >
             <Text className="text-base text-gray-800">Mail: ndiassse.d@gmail.com</Text>
             <Ionicons name="chevron-forward-outline" size={24} color="gray" />
           </TouchableOpacity>
           <TouchableOpacity
             className="flex-row justify-between items-center p-4"
-            onPress={() => navigateTo('/change-password')}
+            onPress={() => navigateTo('/edit-screens/EditPassword')}
           >
             <Text className="text-base text-gray-800">Password: **********</Text>
             <Ionicons name="chevron-forward-outline" size={24} color="gray" />
@@ -66,14 +65,14 @@ export default function ProfileView() {
         <View className="bg-white rounded-lg shadow-md mb-6 border border-[#705855] overflow-hidden">
           <TouchableOpacity
             className="flex-row justify-between items-center p-4 border-b border-dark-brown"
-            onPress={() => navigateTo('/language-settings')}
+            onPress={() => navigateTo('/edit-screens/Language')}
           >
             <Text className="text-base text-gray-800">English</Text>
             <Ionicons name="chevron-forward-outline" size={24} color="gray" />
           </TouchableOpacity>
           <TouchableOpacity
             className="flex-row justify-between items-center p-4"
-            onPress={() => navigateTo('/notification-settings')}
+            onPress={() => navigateTo('/edit-screens/Notifications')}
           >
             <Text className="text-base text-gray-800">Notifications</Text>
             <Ionicons name="chevron-forward-outline" size={24} color="gray" />
@@ -85,14 +84,14 @@ export default function ProfileView() {
         <View className="bg-white rounded-lg shadow-md mb-6 border border-[#705855] overflow-hidden">
           <TouchableOpacity
             className="flex-row justify-between items-center p-4 border-b border-dark-brown"
-            onPress={() => navigateTo('/deactivate-account')}
+            onPress={() => navigateTo('/edit-screens/DeactivateDelete')}
           >
             <Text className="text-base text-red-600">Deactivate or Delete Account</Text>
             <Ionicons name="chevron-forward-outline" size={24} color="gray" />
           </TouchableOpacity>
           <TouchableOpacity
             className="flex-row justify-between items-center p-4"
-            onPress={() => navigateTo('/privacy-cookies')}
+            onPress={() => navigateTo('/edit-screens/Privacy')}
           >
             <Text className="text-base text-gray-800">Privacy & Cookies</Text>
             <Ionicons name="chevron-forward-outline" size={24} color="gray" />
@@ -103,16 +102,13 @@ export default function ProfileView() {
         <TouchableOpacity
           className="bg-red-500 rounded-lg p-4 items-center justify-center mb-8  border border-[#705855]"
           onPress={() => {
-            console.log('User signed out');
             // clear auth logic
-            router.replace('/login'); 
+            router.replace('/login');
           }}
         >
           <Text className="text-white text-xl font-bold">Sign Out</Text>
         </TouchableOpacity>
       </ScrollView>
-
-
     </SafeAreaView>
   );
 }
