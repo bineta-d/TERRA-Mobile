@@ -17,7 +17,7 @@ export default function LocationCard({ title, image }:LocationCardProps) {
      <Image source={image} className="absolute w-full h-full  absolute rounded-xl" resizeMode="cover" />
 
      {/*  Overlay */}
-     <View className="absolute inset-0 bg-black opacity-25" />
+     <View className="absolute inset-0 bg-black opacity-25 rounded-xl" />
       <View className="flex-1 bg-opacity-30  justify-center p-2 items-center">
         <Text className="text-white font-bold text-lg text-center text-2xl">{title}</Text>
       </View>
